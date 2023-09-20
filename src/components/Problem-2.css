@@ -1,0 +1,10 @@
+.contact-link {
+    text-decoration: underline;
+    cursor: pointer;
+    color: #007bff;
+    /* Link color */
+}
+.contact-link:hover {
+    color: #0056b3;
+    /* Hover color */
+}

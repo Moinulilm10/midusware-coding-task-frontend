@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Modal, Button, Form } from "react-bootstrap";
+import "./Problem-2.css";
 
 const Problem2 = () => {
   const [showModalA, setShowModalA] = useState(false);
@@ -171,10 +172,32 @@ const Problem2 = () => {
                 key={contact.id}
               >
                 {contact.id}.{" "}
-                <span className="text-decoration-underline text-primary">
-                  {contact.phone}
-                </span>
+                <span className="contact-link">{contact.phone}</span>
               </p>
+              //   <p
+              //     href="#"
+              //     onClick={() => countryModalToggler(contact.id)}
+              //     key={contact.id}
+              //   >
+              //     {contact.id}.{" "}
+              //     <span
+              //       style={{
+              //         textDecoration: "underline",
+              //         cursor: "pointer",
+              //         color: "#007bff",
+              //         display: "block",
+              //         marginBottom: "8px",
+              //       }}
+              //       onMouseOver={(e) => {
+              //         e.target.style.color = "#0056b3";
+              //       }}
+              //       onMouseOut={(e) => {
+              //         e.target.style.color = "#007bff";
+              //       }}
+              //     >
+              //       {contact.phone}
+              //     </span>
+              //   </p>
             ))}
           </Modal.Body>
           <Modal.Footer>
@@ -236,9 +259,7 @@ const Problem2 = () => {
                   key={contact.id}
                 >
                   {contact.id}.{" "}
-                  <span className="text-decoration-underline text-primary">
-                    {contact.phone}
-                  </span>
+                  <span className="contact-link">{contact.phone}</span>
                 </p>
               ))}
           </Modal.Body>
