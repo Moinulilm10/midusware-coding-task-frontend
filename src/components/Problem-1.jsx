@@ -44,13 +44,13 @@ const Problem1 = () => {
   }
 
   const sortedTasks = displayedTasks.sort((a, b) => {
-    if (a.status === "Active") {
+    if (a.status === "Active" && b.status === "Completed") {
       return -1;
-    } else if (b.status === "Active") {
+    } else if (a.status === "Completed" && b.status === "Active") {
       return 1;
-    } else if (a.status === "Completed" && b.status !== "Active") {
+    } else if (a.status === "Archive" && b.status === "Pending") {
       return -1;
-    } else if (b.status === "Completed" && a.status !== "Active") {
+    } else if (a.status === "Pending" && b.status === "Archive") {
       return 1;
     }
     return 0;
